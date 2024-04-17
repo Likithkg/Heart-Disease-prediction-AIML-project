@@ -1,0 +1,11 @@
+=============python modules required=========
+matplotlib
+scikit-learn
+panadas
+joblib
+flask
+mysql_connector
+flask_mysql_connector
+
+=======Link for obtaining access key for submitting feedback========
+  https://web3forms.com/
