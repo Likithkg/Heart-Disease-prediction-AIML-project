@@ -60,19 +60,6 @@ def input():
     add_data.add_new_data(input_data)
     return render_template('after.html', data=my_prediction)
 
-@app.route('/submit_feedback', methods=['POST'])
-def submit_feedback():
-    name = request.form['name']
-    email = request.form['email']
-    phone = request.form['phone']
-    message = request.form['feed-back']
-    Feedback = FeedBack()
-    if Feedback.submit_feedback(name, email, phone, message):
-        flash('☺ submitted successfully!!! thank you','success')
-        return redirect(url_for('index'))
-    else:
-        flash("☹ Could'nt submit your feed back, try again",'error')
-        return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
