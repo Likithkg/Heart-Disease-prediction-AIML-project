@@ -41,7 +41,7 @@ It also exposes a **secured API** protected by **API key authentication**.
 ---
 
 ## Project Structure
-
+```
 ├── app.py
 ├── auth.py
 ├── helper/
@@ -60,8 +60,7 @@ It also exposes a **secured API** protected by **API key authentication**.
 │ └── img/
 ├── requirements.txt
 └── README.md
-
-
+```
 ---
 
 ## Installation & Setup
