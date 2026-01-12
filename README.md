@@ -1,6 +1,3 @@
-This is the my final year project called as "Heart disease prediction using AIML". It uses python back-end and html, css and javascript front-end.
-It uses 7 modules of python for training dataset and predicting the outcome. 6 from scikit-learn module and 7th one is the xgboost.
-
 # Heart Disease Prediction System (Flask + ML)
 
 A web-based **Heart Disease Prediction System** built using **Python, Flask, and Machine Learning**.  
@@ -41,14 +38,24 @@ It also exposes a **secured API** protected by **API key authentication**.
 ---
 
 ## Project Structure
-
+```
 ├── app.py
-├── auth.py
+├── config/
+│ ├── config.py
 ├── helper/
+│ ├── data/
 │ ├── DiseaseaPrediction.py
 │ ├── UserEntry.py
 │ ├── AddData.py
-│ └── FeedBack.py
+│ ├── FeedBack.py
+│ ├── accuracy.py
+│ ├── DataPreperation.py
+│ └── gen.py
+├── manage/
+│ ├── models/
+│ └── ModelManager.py
+├── traning/
+│ └── ModelTraining.py
 ├── templates/
 │ ├── index.html
 │ ├── login.html
@@ -59,9 +66,12 @@ It also exposes a **secured API** protected by **API key authentication**.
 │ ├── js/
 │ └── img/
 ├── requirements.txt
+├── .gitignore
+├── .env
+├── confusion_matrix.png
+├── heart.sql
 └── README.md
-
-
+```
 ---
 
 ## Installation & Setup
