@@ -44,7 +44,7 @@ It also exposes a **secured API** protected by **API key authentication**.
 ```
 ├── app.py
 ├── config/
-│ ├── config.py.py
+│ ├── config.py
 ├── helper/
 │ ├── data/
 │ ├── DiseaseaPrediction.py
