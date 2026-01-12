@@ -1,5 +1,5 @@
-from DataPreperation import DataPreprocessing
-from ModelTraining import ModelTraining
+from helper.DataPreperation import DataPreprocessing
+from training.ModelTraining import ModelTraining
 import csv
 
 class AddData():
@@ -8,7 +8,7 @@ class AddData():
         self.mt = ModelTraining()
 
     def add_new_data(self, new_data):
-        csv_path = 'code/dataset/heart1.csv'
+        csv_path = './dataset/heart1.csv'
         with open(csv_path, mode='a',newline='') as file:
             writer = csv.writer(file)
             writer.writerow(new_data)

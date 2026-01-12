@@ -1,4 +1,4 @@
-from DataPreperation import DataPreprocessing
+from helper.DataPreperation import DataPreprocessing
 from sklearn.ensemble import AdaBoostClassifier, RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
@@ -29,15 +29,6 @@ for name, model in models.items():
     accuracy = accuracy_score(y_test, y_pred)
     accuracies.append(accuracy)
 
-#mean_value = sum(accuracies)/len(accuracies)
-#print("Mean Accuracy of all Models: ", mean_value)
-#0.8857142857142856
-#0.8857142857142856
-#0.8878048780487804
-#value = ((0.8857142857142856 + 0.8857142857142856 + 0.8878048780487804)/3)*100
-#print(value)
-
-### the Accuracy is 88.64 %
 confussions = {}
 for i in range(0, 4):
     for name, model in models.items():
@@ -53,17 +44,3 @@ plt.title('confusion matrix')
 plt.xlabel('predicted labels')
 plt.ylabel('True lables')
 plt.show()
-
-
-
-#mean_value = sum(precissions)/len(precissions)
-#print(mean_value)
-
-#0.8891215648466014
-#0.8911524259715392
-#0.8891215648466014
-
-#value = ((0.8891215648466014 + 0.8911524259715392 + 0.8891215648466014) / 3) * 100
-#print('Weighted Average Precision: ', value)
-
-### the Precission of this application is 88.98%
