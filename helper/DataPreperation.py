@@ -9,7 +9,7 @@ class DataPreprocessing:
         self.data = None
 
     def preprocess_data(self):
-        self.data = pd.read_csv("code/dataset/heart1.csv")
+        self.data = pd.read_csv("./dataset/heart1.csv")
 
             # Drop rows with any missing values
         self.data.dropna(axis=0, how='any', inplace=True)
@@ -34,23 +34,13 @@ class DataPreprocessing:
 
     def SaveModel(self, model, filename):
         # Create directory if it does not exist
-        os.makedirs("code/models", exist_ok=True)
+        os.makedirs("../manager/models", exist_ok=True)
 
         # Remove the existing model file if it exists
-        model_file = os.path.join("code/models", filename)
+        model_file = os.path.join("../manager/models", filename)
         if os.path.exists(model_file):
             os.remove(model_file)
 
         # Save the model to the specified filepath
-        jl.dump(model, os.path.join("code/models", filename))
+        jl.dump(model, os.path.join("../manager/models", filename))
 
-
-
-
-
-
-    
-#for testing the modules
-
-#dataprep = DataPreprocessing()
-#dataprep.preprocess_data()

@@ -20,7 +20,7 @@ class ModelManager:
     }
         for model_name, model_path in model_path.items():
             try:
-                self.models[model_name] = joblib.load(f'code/models/{model_path}')
+                self.models[model_name] = joblib.load(f'./models/{model_path}')
             except FileNotFoundError:
                 print(f"Model file not found for {model_name}. Please check the file path.")
     
@@ -50,15 +50,5 @@ class ModelManager:
         best_prediction = 0 if count_0 > count_1 else 1 if count_1 > count_0 else None
         return best_prediction
 
-
-#for testing the module
-
-
-#input_data = np.array([0,100,122,0,0,1,0]).reshape(1,-1)
-#mm = ModelManager()
-#mm.load_models()
-#predictions = mm.predict(input_data)
-#print(predictions)
-#print(mm.get_best_prediction(predictions))
 
 

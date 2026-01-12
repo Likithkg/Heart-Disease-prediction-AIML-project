@@ -1,4 +1,4 @@
-from DataPreperation import DataPreprocessing
+from helper.DataPreperation import DataPreprocessing
 from sklearn.ensemble import AdaBoostClassifier, RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
@@ -36,10 +36,3 @@ class ModelTraining:
         best_accuracy = max(accuracy.values())
         return best_accuracy
         
-#for testing and training the model the module 
-
-#mt = ModelTraining()
-#url = "dataset/heart.csv"
-#trained_models = mt.train_models()
-#mt.Select_best_model(trained_models)
-#print("Trained models:", trained_models)

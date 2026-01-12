@@ -1,15 +1,14 @@
-from flask import Flask, render_template, request, redirect, url_for, session, flash
-from DiseaseaPrediction import DiseasesPrediction
-from UserEntry import UserEntry
-from FeedBack import FeedBack
-from AddData import AddData
+from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify
+from helper.DiseaseaPrediction import DiseasesPrediction
+from helper.UserEntry import UserEntry
+from helper.FeedBack import FeedBack
+from helper.AddData import AddData
+from functools import wraps
 
 app = Flask(__name__, template_folder='templates', static_folder="templates/static")
-app.secret_key="4ac4285dab04a0616a1e6e35d4a3de3c"
 ue = UserEntry()
 dp = DiseasesPrediction()
 add_data = AddData()
-
 
 @app.route('/')
 def index():

@@ -1,4 +1,4 @@
-from ModelManager import ModelManager
+from manager.ModelManager import ModelManager
 import numpy as np
 
 class DiseasesPrediction:
@@ -11,9 +11,3 @@ class DiseasesPrediction:
         predictions = self.mm.predict(input_data)
         final_prediction = self.mm.get_best_prediction(predictions)
         return final_prediction
-
-#for testing
-
-#new_data = [1,125,168,2,0,2,0]
-#dp = DiseasesPrediction()
-#print(dp.predict_diseases(new_data))

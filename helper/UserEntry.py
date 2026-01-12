@@ -1,14 +1,17 @@
 from flask import session
 import mysql.connector
+from config import config
 from werkzeug.security import generate_password_hash, check_password_hash
+
+Host, Database, Password, User = config.get_db_config()
 
 class UserEntry:
     def __init__(self):
         self.db = mysql.connector.connect(
-        host='localhost',
-        user='root',
-        password='',
-        database='heartdb'
+            host=Host,
+            user=User,
+            password=Password,
+            database = Database
         )
 
     def register_user(self, name, email, password):

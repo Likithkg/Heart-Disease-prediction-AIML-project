@@ -1,13 +1,16 @@
 from flask import session
 import mysql.connector
+from config import config
+
+Host, Database, Password, User = config.get_db_config()
 
 class FeedBack():
     def __init__(self):
         self.db = mysql.connector.connect(
-            host='localhost',
-            user='root',
-            password='',
-            database = 'heartdb'
+            host=Host,
+            user=User,
+            password=Password,
+            database = Database
         )
 
     def submit_feedback(self, name, email, phone, message):
@@ -23,8 +26,3 @@ class FeedBack():
             self.db.rollback()
             cursor.close()
             return False
-
-            
-#for testing module
-#feedback = FeedBack()
-#feedback.submit_feedback('likith','likithbopanna222@gmail.com','0123456789','hi hello iam under the water, please save me')
