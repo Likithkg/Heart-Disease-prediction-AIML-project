@@ -43,12 +43,22 @@ It also exposes a **secured API** protected by **API key authentication**.
 ## Project Structure
 ```
 ├── app.py
-├── auth.py
+├── config/
+│ ├── config.py.py
 ├── helper/
+│ ├── data/
 │ ├── DiseaseaPrediction.py
 │ ├── UserEntry.py
 │ ├── AddData.py
-│ └── FeedBack.py
+│ ├── FeedBack.py
+│ ├── accuracy.py
+│ ├── DataPreperation.py
+│ └── gen.py
+├── manage/
+│ ├── models/
+│ └── ModelManager.py
+├── traning/
+│ └── ModelTraining.py
 ├── templates/
 │ ├── index.html
 │ ├── login.html
@@ -59,6 +69,10 @@ It also exposes a **secured API** protected by **API key authentication**.
 │ ├── js/
 │ └── img/
 ├── requirements.txt
+├── .gitignore
+├── .env
+├── confusion_matrix.png
+├── heart.sql
 └── README.md
 ```
 ---
